@@ -13,6 +13,6 @@ jobs:
         JENKINS_USERNAME: ${{ secrets.JENKINS_USERNAME }}
         JENKINS_API_TOKEN: ${{ secrets.JENKINS_API_TOKEN }}
       run: |
-        curl -X POST https://fa87-59-96-56-57.ngrok-free.app/jod/docker-pipeline/build \
+        curl -X POST https://fa87-59-96-56-57.ngrok-free.app/job/docker-pipeline/build \
           --user $JENKINS_USERNAME:$JENKINS_API_TOKEN
         # Add any additional curl options as needed
