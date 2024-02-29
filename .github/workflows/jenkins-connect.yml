@@ -1,0 +1,13 @@
+name: CI/CD with Jenkins
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Trigger Jenkins Pipeline
+      run: |
+        curl -X POST https://fa87-59-96-56-57.ngrok-free.app/github-webhook/
+        # Add any additional curl options as needed
